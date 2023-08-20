@@ -1,5 +1,6 @@
 {
   "name": "design-app",
+  "homepage": "https://github.com/Yeoh-TH/design-app-101/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,5 +11,8 @@
   },
   "devDependencies": {
     "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
