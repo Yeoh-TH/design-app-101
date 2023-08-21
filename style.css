@@ -3,13 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --navy: hsl(216, 69%, 20%);
-  --darkBeige: hsl(32, 43%, 75%);
-  --beige: hsl(34, 45%, 85%);
-  --lightBeige:hsl(35, 58%, 94%);
+  --colorOne:hsl(33, 60%, 94%);
+  --colorTwo: hsl(216, 69%, 20%);
+  --colorThree: hsl(32, 43%, 75%);
+  --colorFour: hsl(34, 45%, 85%);
 
   color-scheme: light dark;
-  background-color: var(--lightBeige);
+  background-color: var(--colorOne);
 
 
   font-synthesis: none;
@@ -24,46 +24,53 @@ h1{
   line-height: 14vw;
   font-weight: 400;
   text-align: center;
-  color: var(--navy);
+  color: var(--colorTwo);
 }
 
 h2{
   font-size: 7vw;
   line-height: 13vw;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
-  color: var(--navy);
+  color: var(--colorThree);
 }
 
 p{
   font-size: 4vw;
   line-height: 10vw;
-  font-weight: 100;
+  font-weight: 200;
   text-align: center;
-  color: var(--navy);
+  color: var(--colorTwo);
 }
 
 .colorShowcase{
-  color: black;
   font-weight: 400;
   width: 100%;
-  border-width: 2px;
-  border-style: dashed;
+  padding-bottom: 2vw;
 }
 
-#colorOne{
-  background-color: var(--lightBeige);
+.colorInput{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 20vw;
 }
 
-#colorTwo{
-  background-color: var(--navy);
-  color: white;
+@media screen and (max-width: 1050px){
+  .colorInput {
+      height: 20vw !important;
+  }
 }
 
-#colorThree{
-  background-color: var(--darkBeige);
+@media screen and (min-width: 500px){
+  .colorInput {
+      height: 10vw;
+  }
 }
 
-#colorFour{
-  background-color: var(--beige);
+.colorInput::-webkit-color-swatch{
+  border-radius: 15px;
 }
