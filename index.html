@@ -5,19 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/design-app-101/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design App</title>
-    <script type="module" crossorigin src="/design-app-101/assets/index-24d87a98.js"></script>
-    <link rel="stylesheet" href="/design-app-101/assets/index-f8e1c602.css">
+    <script type="module" crossorigin src="/design-app-101/assets/index-41fe8ecc.js"></script>
+    <link rel="stylesheet" href="/design-app-101/assets/index-e0b96680.css">
   </head>
   <body>
     <div id="app"></div>
     
+    <script>const root_theme = document.querySelector(':root');</script>
     <h1>Welcome to TH's design app!</h1>
-    <h2>So, what is this for?</h2>
-    <p>Well, since I am the <abbr title="Chief Design Officer">CDO</abbr> of my start-up, I need a place to test my colour schemes and designs!</p>
+    <h2 style="margin: 1vw;">So, what is this for?</h2>
+    <p style="margin: 1vw;">Well, since I am the <abbr title="Chief Design Officer">CDO</abbr> of my start-up, I need a place to test my colour schemes and designs!</p>
+    <h2 style="margin: 1vw;">Well, what are you waiting for?</h2> 
+    <p style="margin: 1vw;">Go on don't be shy, change the colours.</p>
     <h1>Current color scheme:</h1>
-    <p id="colorOne" class="colorShowcase">hsl(35, 58%, 94%) <br/> #F8F0E5</p>
-    <p id="colorTwo" class="colorShowcase">hsl(216, 69%, 20%) <br/> #102C57</p>
-    <p id="colorThree" class="colorShowcase">hsl(32, 43%, 75%) <br/> #DAC0A3</p>
-    <p id="colorFour" class="colorShowcase">hsl(34, 45%, 85%) <br/> #EADBC8</p>
+    <div class="colorShowcase">
+    <input type="color" class="colorInput" id="colorOne" value="#f9f1e7" onchange="root_theme.style.setProperty('--colorOne',this.value)"></input>
+    </div>
+    <div class="colorShowcase">
+    <input type="color" class="colorInput" id="colorTwo" value="#102C57" onchange="root_theme.style.setProperty('--colorTwo',this.value)"></input>
+    </div>
+    <div class="colorShowcase">
+    <input type="color" class="colorInput" id="colorThree" value="#DAC0A3" onchange="root_theme.style.setProperty('--colorThree',this.value)"></input>
+    </div>
+    <div class="colorShowcase">
+    <input type="color" class="colorInput" id="colorFour"  value="#EADBC8" onchange="root_theme.style.setProperty('--colorFour',this.value)"></input>
+    </div>
   </body>
 </html>
