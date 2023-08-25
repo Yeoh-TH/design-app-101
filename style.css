@@ -5,8 +5,8 @@
 
   --colorOne:hsl(33, 60%, 94%);
   --colorTwo: hsl(216, 69%, 20%);
-  --colorThree: hsl(32, 43%, 75%);
-  --colorFour: hsl(34, 45%, 85%);
+  --colorThree: hsl(200, 43%, 35%);
+  --colorFour: hsl(35, 60%, 50%);
 
   color-scheme: light dark;
   background-color: var(--colorOne);
