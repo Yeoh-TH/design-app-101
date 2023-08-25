@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/design-app-101/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design App</title>
-    <script type="module" crossorigin src="/design-app-101/assets/index-41fe8ecc.js"></script>
-    <link rel="stylesheet" href="/design-app-101/assets/index-e0b96680.css">
+    <script type="module" crossorigin src="/design-app-101/assets/index-d9053976.js"></script>
+    <link rel="stylesheet" href="/design-app-101/assets/index-5edb91bd.css">
   </head>
   <body>
     <div id="app"></div>
@@ -19,16 +19,22 @@
     <p style="margin: 1vw;">Go on don't be shy, change the colours.</p>
     <h1>Current color scheme:</h1>
     <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorOne" value="#f9f1e7" onchange="root_theme.style.setProperty('--colorOne',this.value)"></input>
+    <input type="color" class="colorInput" id="colorOne" value="#f9f1e7" onchange="root_theme.style.setProperty('--colorOne',this.value), document.getElementById('labelForOne').innerHTML=(this.value)">
+    <label for="colorOne" style="color: #000000; font-size: 10vw; text-align: center;" id="labelForOne">#f9f1e7</label>
+    </input>
     </div>
     <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorTwo" value="#102C57" onchange="root_theme.style.setProperty('--colorTwo',this.value)"></input>
+    <input type="color" class="colorInput" id="colorTwo" value="#102C57" onchange="root_theme.style.setProperty('--colorTwo',this.value), document.getElementById('labelForTwo').innerHTML=(this.value), document.getElementById('labelForTwo').style.color = this.value">
+    <label for="colorTwo" style="color: #102c57; font-size: 10vw; text-align: center;" id="labelForTwo">#102C57</label>
+    </input>
     </div>
     <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorThree" value="#DAC0A3" onchange="root_theme.style.setProperty('--colorThree',this.value)"></input>
+    <input type="color" class="colorInput" id="colorThree" value="#DAC0A3" onchange="root_theme.style.setProperty('--colorThree',this.value), document.getElementById('labelForThree').innerHTML=(this.value), document.getElementById('labelForThree').style.color = this.value"></input>
+    <label for="colorThree" style="color: #dac0a3; font-size: 10vw; text-align: center;" id="labelForThree">#DAC0A3</label>
     </div>
     <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorFour"  value="#EADBC8" onchange="root_theme.style.setProperty('--colorFour',this.value)"></input>
+    <input type="color" class="colorInput" id="colorFour"  value="#EADBC8" onchange="root_theme.style.setProperty('--colorFour',this.value), document.getElementById('labelForFour').innerHTML=(this.value), document.getElementById('labelForFour').style.color = this.value"></input>
+    <label for="colorFour" style="color: #EADBC8; font-size: 10vw; text-align: center;" id="labelForFour">#EADBC8</label>
     </div>
   </body>
 </html>
