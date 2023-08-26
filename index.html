@@ -4,35 +4,46 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Well, since I am the of my start-up, I need a place to test my colour schemes and designs! "/>
     <title>Design App</title>
+    <script src="https://kit.fontawesome.com/7b985f1e3c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/app.js"></script>
     <script>const root_theme = document.querySelector(':root');</script>
-    <h1>Welcome to TH's design app!</h1>
+    <h1> <span class="fas fa-brush fa-spin" id="introIcon"></span><br/>Welcome to TH's design app!</h1>
     <h2 style="margin: 1vw;">So, what is this for?</h2>
-    <p style="margin: 1vw;">Well, since I am the <abbr title="Chief Design Officer">CDO</abbr> of my start-up, I need a place to test my colour schemes and designs!</p>
+    <p style="margin: 1vw;">An app made for testing out color schemes!</p>
     <h2 style="margin: 1vw;">Well, what are you waiting for?</h2> 
     <p style="margin: 1vw;">Go on don't be shy, change the colours.</p>
     <h1>Current color scheme:</h1>
-    <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorOne" value="#f9f1e7" onchange="root_theme.style.setProperty('--colorOne',this.value), document.getElementById('labelForOne').innerHTML=(this.value)">
-    <label for="colorOne" style="color: #000000; font-size: 10vw; text-align: center;" id="labelForOne">#f9f1e7</label>
-    </input>
+    <div id="colorPalette">
+    <canvas id="forColorOne"></canvas>
+    <canvas id="forColorTwo"></canvas>
+    <canvas id="forColorThree"></canvas>
+    <canvas id="forColorFour"></canvas>
     </div>
+    <script type="module" src="/app.js"></script>
+    <h2 id="setColorVisible"> Set colors <i class="fas fa-palette"></i> </h2>
+    <div id="colors">
     <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorTwo" value="#102C57" onchange="root_theme.style.setProperty('--colorTwo',this.value), document.getElementById('labelForTwo').innerHTML=(this.value), document.getElementById('labelForTwo').style.color = this.value">
-    <label for="colorTwo" style="color: #102c57; font-size: 10vw; text-align: center;" id="labelForTwo">#102C57</label>
-    </input>
-    </div>
-    <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorThree" value="#336680" onchange="root_theme.style.setProperty('--colorThree',this.value), document.getElementById('labelForThree').innerHTML=(this.value), document.getElementById('labelForThree').style.color = this.value"></input>
-    <label for="colorThree" style="color: #336680; font-size: 10vw; text-align: center;" id="labelForThree">#336680</label>
-    </div>
-    <div class="colorShowcase">
-    <input type="color" class="colorInput" id="colorFour"  value="#cc8c33" onchange="root_theme.style.setProperty('--colorFour',this.value), document.getElementById('labelForFour').innerHTML=(this.value), document.getElementById('labelForFour').style.color = this.value"></input>
-    <label for="colorFour" style="color: #cc8c33; font-size: 10vw; text-align: center;" id="labelForFour">#cc8c33</label>
+      <input type="color" class="colorInput" id="colorOne" value="#f9f1e7" onchange="root_theme.style.setProperty('--colorOne',this.value), document.getElementById('labelForOne').innerHTML=(this.value)">
+      <label for="colorOne" style="color: #000000; font-size: 10vw; text-align: center;" id="labelForOne">#f9f1e7</label>
+      </input>
+      </div>
+      <div class="colorShowcase">
+      <input type="color" class="colorInput" id="colorTwo" value="#102C57" onchange="root_theme.style.setProperty('--colorTwo',this.value), document.getElementById('labelForTwo').innerHTML=(this.value), document.getElementById('labelForTwo').style.color = this.value">
+      <label for="colorTwo" style="color: #102c57; font-size: 10vw; text-align: center;" id="labelForTwo">#102C57</label>
+      </input>
+      </div>
+      <div class="colorShowcase">
+      <input type="color" class="colorInput" id="colorThree" value="#336680" onchange="root_theme.style.setProperty('--colorThree',this.value), document.getElementById('labelForThree').innerHTML=(this.value), document.getElementById('labelForThree').style.color = this.value"></input>
+      <label for="colorThree" style="color: #336680; font-size: 10vw; text-align: center;" id="labelForThree">#336680</label>
+      </div>
+      <div class="colorShowcase">
+      <input type="color" class="colorInput" id="colorFour"  value="#cc8c33" onchange="root_theme.style.setProperty('--colorFour',this.value), document.getElementById('labelForFour').innerHTML=(this.value), document.getElementById('labelForFour').style.color = this.value"></input>
+      <label for="colorFour" style="color: #cc8c33; font-size: 10vw; text-align: center;" id="labelForFour">#cc8c33</label>
+      </div>
     </div>
   </body>
 </html>

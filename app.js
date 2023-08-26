@@ -1,7 +1,14 @@
 import './style.css'
 
-function app(){
-    const root_theme = document.querySelector(':root');
-}
+var colors = document.getElementById("colors");
+var setter = document.getElementById("setColorVisible");
 
-export default app
+setter.addEventListener("click", function(){
+    if (colors.style.display === "none"){
+        colors.style.display = "block"
+    }else{
+        colors.style.display = "none"
+    }
+})
+
+
